@@ -1,0 +1,88 @@
+﻿@model Employee
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>stream-serv</title>
+    <link href="~/css/HomeStyleTop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="header">
+        @Html.ActionLink("stream-serv", "Index", "Home")
+        @Html.ActionLink("TV series", "ViewTvSeries", "Home")
+        @Html.ActionLink("Films", "ViewFilm", "Home")
+        @Html.ActionLink("Music", "ViewMusic", "Home")
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            @Html.ActionLink("Profile", "ViewProfile", "Home")
+            <li><a href="/Settings/Index">Settings</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="add_button">
+            @using (Html.BeginForm("Add", "Personal", FormMethod.Post))
+            {
+                <p>
+                    Фамилия
+                    @Html.TextBoxFor(m => m.MiddleName)
+                </p>
+                <p>
+                    Имя
+                    @Html.TextBoxFor(m => m.FirstName)
+                </p>
+                <p>
+                    Отчество
+                    @Html.TextBoxFor(m => m.LastName)
+                </p>
+                <p>
+                    Возраст
+                    @Html.TextBoxFor(m => m.Age)
+                </p>
+                <p>
+                    Должность
+                    <br> @Html.RadioButtonFor(m => m.Type, "GeneralDirector")<span>Генеральный директор</span>
+                    <br>@Html.RadioButtonFor(m => m.Type, "DeputyDirector")<span>Заместитель директора</span>
+                    <br>@Html.RadioButtonFor(m => m.Type, "AdvertisingManager")<span>Менеджер по рекламе</span>
+                    <br>    @Html.RadioButtonFor(m => m.Type, "Accountant")<span>Бухгалтер</span>
+                    <br>    @Html.RadioButtonFor(m => m.Type, "Lawyer1")<span>Юрист 1</span>
+                    <br>    @Html.RadioButtonFor(m => m.Type, "Lawyer2")<span>Юрист 2</span>
+                    <br>    @Html.RadioButtonFor(m => m.Type, "Programmer")<span>Программист</span>
+                    <br>    @Html.RadioButtonFor(m => m.Type, "AssistantProgrammer")<span>Помощник программиста</span>
+                </p>
+                <p>
+                    Стаж
+                    @Html.TextBoxFor(m => m.Experience)
+                </p>
+                <p>
+                    Заработная плата
+                    @Html.TextBoxFor(m => m.Wage)
+                </p>
+                <p>
+                    Образование
+                    @Html.TextBoxFor(m => m.Education)
+                </p>
+                <p>
+                    Логин
+                    @Html.TextBoxFor(m => m.Login)
+                </p>
+                <p>
+                    Пароль
+                    @Html.TextBoxFor(m => m.Password)
+                </p>
+                <p><input type="submit" value="Отправить" /></p>
+            }
+        </div>
+        <div class="post">
+        </div>
+
+    </div>
+    <div class="container">@RenderBody()</div>
+
+    <div class="footer">
+        <h5>copyright 2023; все права защищены.</h5>
+    </div>
+</body>
+</html>

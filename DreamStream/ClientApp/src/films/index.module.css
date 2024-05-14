@@ -1,0 +1,20 @@
+.form {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	grid-template-rows: auto;
+}
+
+	.form > * {
+		display: grid;
+		grid-column: 1 / 3;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+	}
+
+		.form > * > :nth-child(1n) {
+			width: auto;
+		}
+
+		.form > * > :last-child {
+			grid-column: 2;
+		}

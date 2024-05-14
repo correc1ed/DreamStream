@@ -1,0 +1,28 @@
+.auth {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	grid-template-rows: auto;
+}
+
+	.auth > * {
+		display: grid;
+		grid-column: 1 / 3;
+		grid-template-columns: subgrid;
+		grid-template-rows: subgrid;
+	}
+
+		.auth > * > :nth-child(1n) {
+			width: auto;
+		}
+
+		.auth > * > :last-child {
+			grid-column: 2;
+		}
+
+.user {
+	font-weight: 700;
+}
+
+.register {
+	grid-template-columns: max-content 1fr;
+}

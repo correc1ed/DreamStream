@@ -1,0 +1,64 @@
+*
+{
+	font-family: helvetica, arial, sans-serif;
+	border: 1px solid blue;
+	padding: 5px 15px;
+}
+a:link {
+	text-decoration: none;
+	font-family: helvetica;
+}
+a:visited {
+  color: gray;
+}
+body
+{
+	background : white;
+	margin: 0 auto;
+}
+h4
+{
+	text-align: right;
+}
+.header
+{
+	background: orange;
+	color: white;
+	min-height: 60px;
+	font-size: 30pt;
+
+	
+}
+
+.sidebar
+{
+	float: left;
+	margin-right: 10px;
+	min-width: 180px;
+}
+
+.container
+{
+	text-align: justify;
+	font-style : oblique;
+	margin-left : 216px;
+}
+.footer	
+{
+	font-weight: bold;
+	color: gray;
+	float: left;
+	min-height: 30px;
+	line-height: 30px;
+}
+.add_button
+{
+	
+	float: left;
+	min-height: 50px;
+	min-width: 150px;
+}
+.post
+{
+	
+}

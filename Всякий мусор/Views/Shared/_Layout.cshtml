@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>stream-serv</title>
+    <link href="~/css/HomeStyleTop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="header">
+        @Html.ActionLink("stream-serv", "Index", "Home")
+        @Html.ActionLink("TV series", "ViewTvSeries", "Home")
+        @Html.ActionLink("Films", "ViewFilm", "Home")
+        @Html.ActionLink("Music", "ViewMusic", "Home")
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            @Html.ActionLink("Profile", "ViewProfile", "Home")
+            @Html.ActionLink("Personal", "ViewPersonal", "Home")
+            @Html.ActionLink("Settings", "ViewSettings", "Home")
+        </ul>
+    </div>
+
+    <div class="container">@RenderBody()</div>
+
+    <div class="footer">
+        <h5>copyright 2023; все права защищены.</h5>
+    </div>
+</body>
+</html>

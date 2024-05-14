@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="container"> 
+    <div class="add_button">
+    </div>
+    <div class="post">
+        @using (Html.BeginForm("Search", "Home", FormMethod.Post)) {
+            <p>
+                @Html.TextBox("str", "")
+                <input type="submit" value="Отправить" />
+            </p>
+        }
+    </div>
+</div>

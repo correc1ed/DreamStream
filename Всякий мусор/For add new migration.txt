@@ -1,0 +1,1 @@
+dotnet ef migrations add "V2" --project "s-service MVC"

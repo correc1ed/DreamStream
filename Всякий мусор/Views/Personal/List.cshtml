@@ -1,0 +1,91 @@
+﻿@model Employee
+@{
+    ViewData["Title"] = "Search";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>stream-serv</title>
+    <link href="~/css/HomeStyleTop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="header">
+        <a href="/Home/Index">stream-serv</a>
+        <a href="/Music/Index">Music</a>
+        <a href="/Films/Index">Films</a>
+        <a href="/TVseries/Index">TV series</a>
+    </div>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="/Profile/Index">Profile</a></li>
+            <li><a href="/Settings/Index">Settings</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td>Идентификатор</td>
+                <td>Фамилия</td>
+                <td>Имя</td>
+                <td>Отчество</td>
+                <td>Возраст</td>
+                <td>Должность</td>
+                <td>Стаж</td>
+                <td>Оклад</td>
+                <td>Образование</td>
+                <td>Логин</td>
+                <td>Пароль</td>
+            </tr>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                  @item.Id;
+                </td>
+                <td>
+                  @item.MiddleName;
+                </td>
+                <td>
+                    @item.FirstName;
+                </td>
+                <td>
+                   @item.LastName;
+                </td>
+                <td>
+                   @item.Age;
+                </td>
+                 <td>
+                   @item.Type;
+                </td>
+                    <td>
+                        @item.Experience;
+                </td>
+                <td>
+                        @item.Wage;
+                </td>
+                <td>
+                    @item.Education;
+                </td>
+                <td>
+                        @item.Login;
+                </td>
+                <td>
+                        @item.Password;
+                </td>
+            </tr>
+         }
+            </table>
+        </div>
+
+    <div class="footer">
+        <h5>copyright 2023; все права защищены.</h5>
+    </div>
+
+
+</body>
+</html>

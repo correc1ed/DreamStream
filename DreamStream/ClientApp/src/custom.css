@@ -1,0 +1,112 @@
+/* Provide sufficient contrast against white background */
+
+/*.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+em {
+	color: #0b92d5;
+	font-size: 23px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.80857;
+	font-weight: normal;
+}
+
+.headerstyle {
+	color: darkslategrey;
+	background-color: aliceblue;
+	font-size: 25px;
+	font-family: 'Arial Rounded MT', sans-serif;
+	display: flex;
+	padding: 14px;
+	padding-bottom: 2px;
+}
+
+.bodystyle {
+
+	color: darkslategrey;
+	background-color: azure;
+	font-size: 22px;
+	font-family: 'Arial Rounded MT', sans-serif;
+	display: flex;
+	padding: 14px;
+	padding-bottom: 2px;
+}
+
+code {
+	color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+body {
+	color: #3d0000;
+	font-size: 23px;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.80857;
+	font-weight: normal;
+}
+
+a {
+	color: #1f1f1f;
+	text-decoration: none !important;
+	outline: none !important;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: 0;
+	font-weight: normal;
+	position: relative;
+	padding: 0;
+	font-weight: normal;
+	line-height: normal;
+	color: #111111;
+	margin: 0
+}
+
+h1 {
+	font-size: 24px
+}
+
+h2 {
+	font-size: 22px
+}
+
+h3 {
+	font-size: 18px
+}
+
+h4 {
+	font-size: 16px
+}
+
+h5 {
+	font-size: 14px
+}
+
+h6 {
+	font-size: 13px
+}
+
+p {
+	margin: 20px;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 24px;
+}*/
+
+
+

@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="add_button">
+    <button>Создать новый пост.</button>
+</div>
+
+<div class="add_button">
+    @Html.ActionLink("Добавить новый файл", "ViewAddFilm", "Home")
+</div>
+
+<div class="container">
+    <div id="file-list">
+    </div>
+</div>
+
+<script type="text/javascript">
+    (async function () {
+        const response = await fetch('@Url.Action("GetAll", "Media")?type=Film');
+        if (response.status === 200) {
+            const newContainer = document.createElement('div');
+            newContainer.id = 'file-list';
+            for (const file of await response.json()) {
+                const video = document.createElement('video');
+                video.src = `api/media/${file.id}`;
+                video.controls = true;
+                video.width = 500;
+                video.height = 400;
+                video.loop = true;
+                newContainer.appendChild(video);
+            }
+            document.getElementById('file-list').replaceWith(newContainer);
+        }
+    })();
+</script>

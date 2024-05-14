@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>stream-serv</title>
+    <link href="~/css/HomeStyleTop.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="add_button">
+            <button>Создать новый пост.</button>
+        </div>
+
+        <div class="add_button">
+            @Html.ActionLink("Добавить новый файл", "ViewAddMusic", "Home")
+        </div>
+        <div class="post">
+
+        </div>
+
+        <div class="container">
+            <div id="file-list">
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            (async function () {
+                const response = await fetch('@Url.Action("GetAll", "Media")?type=Music');
+                if (response.status === 200) {
+                    const newContainer = document.createElement('div');
+                    newContainer.id = 'file-list';
+                    for (const file of await response.json()) {
+                        const audio = document.createElement('music');
+                        audio.src = `api/media/${file.id}`;
+                        audio.controls = true;
+                        audio.width = 500;
+                        audio.height = 400;
+                        audio.loop = true;
+                        newContainer.appendChild(audio);
+                    }
+                    document.getElementById('file-list').replaceWith(newContainer);
+                }
+            })();
+        </script>
+
+    </div>
+
+
+</body>
+</html>

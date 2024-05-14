@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model MediaFile
+
+<div class="add_button">
+    @using (Html.BeginForm("Add", "Film", FormMethod.Post)) {
+        <p>
+            Название
+            @Html.TextBoxFor(f => f.Name)
+        </p>
+        <p>
+            Тип файла
+            <br>@Html.RadioButtonFor(m => m.FileType, "Films")<span>Кино</span>
+            <br>@Html.RadioButtonFor(m => m.FileType, "Music")<span>Музыка</span>
+            <br>@Html.RadioButtonFor(m => m.FileType, "TVseries")<span>Сериал</span>
+        </p>
+        <p>
+            Ссылка на файл.
+            @Html.TextBoxFor(m => m.FileLink)
+        </p>
+        <p>
+            Добавить файл
+            @Html.TextBoxFor(m => m.File, new { type = "file" })
+            @Html.ValidationMessageFor(m => m.File)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    }
+</div>
